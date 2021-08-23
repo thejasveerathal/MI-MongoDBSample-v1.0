@@ -10,7 +10,8 @@
   <description>MI-MongoDBSample-ESB_module</description>
   <modules>
     <module>artifacts\api\MongoDBSample</module>
-    <module>artifacts\local-entry\MongoDBSample_Connection_URI</module>
+    <module>artifacts\local-entry\MongoDBSampleConnectionURI</module>
+    <module>artifacts\local-entry\MongoDBSampleLocalConfig</module>
   </modules>
   <distributionManagement>
     <repository>

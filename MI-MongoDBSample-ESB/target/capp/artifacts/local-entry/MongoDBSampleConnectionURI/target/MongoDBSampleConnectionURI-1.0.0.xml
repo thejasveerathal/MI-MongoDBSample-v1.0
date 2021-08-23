@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<localEntry key="MongoDBSampleConnectionURI" xmlns="http://ws.apache.org/ns/synapse">
+    <mongodb.init>
+        <connectionType>URI</connectionType>
+        <name>MongoDBSampleConnectionURI</name>
+        <connectionURI>mongodb+srv://mongod:mongod@cluster0.v4up4.mongodb.net/mongodbsample?retryWrites=true&amp;w=majority</connectionURI>
+        <database>mongodbsampledev</database>
+    </mongodb.init>
+</localEntry>
