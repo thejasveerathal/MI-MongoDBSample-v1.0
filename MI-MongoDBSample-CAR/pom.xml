@@ -14,8 +14,38 @@
   <name>MI-MongoDBSample-CAR</name>
   <description>MI-MongoDBSample-CAR</description>
   <properties>
+    <com.rcrc.wso2.mi.local-entry_._MongoDBSampleLocalConfig>capp/EnterpriseServiceBus</com.rcrc.wso2.mi.local-entry_._MongoDBSampleLocalConfig>
+    <com.rcrc.wso2.mi.local-entry_._MongoDBSampleConnectionURI>capp/EnterpriseServiceBus</com.rcrc.wso2.mi.local-entry_._MongoDBSampleConnectionURI>
+    <com.rcrc.wso2.mi.lib_._mongodb-connector>capp/EnterpriseServiceBus</com.rcrc.wso2.mi.lib_._mongodb-connector>
     <artifact.types>jaggery/app=zip,synapse/priority-executor=xml,synapse/inbound-endpoint=xml,service/rule=aar,synapse/message-store=xml,event/stream=json,service/meta=xml,datasource/datasource=xml,synapse/proxy-service=xml,bpel/workflow=zip,synapse/sequence=xml,synapse/endpointTemplate=xml,carbon/application=car,wso2/gadget=dar,synapse/api=xml,synapse/event-source=xml,synapse/message-processors=xml,event/receiver=xml,lib/dataservice/validator=jar,synapse/template=xml,synapse/endpoint=xml,lib/carbon/ui=jar,lib/synapse/mediator=jar,synapse/metadata=yaml,event/publisher=xml,synapse/local-entry=xml,synapse/task=xml,webapp/jaxws=war,registry/resource=zip,synapse/configuration=xml,service/axis2=aar,synapse/lib=zip,synapse/sequenceTemplate=xml,event/execution-plan=siddhiql,service/dataservice=dbs,web/application=war,lib/library/bundle=jar</artifact.types>
+    <com.rcrc.wso2.mi.api_._MongoDBSample>capp/EnterpriseServiceBus</com.rcrc.wso2.mi.api_._MongoDBSample>
   </properties>
+  <dependencies>
+    <dependency>
+      <groupId>com.rcrc.wso2.mi.lib</groupId>
+      <artifactId>mongodb-connector</artifactId>
+      <version>1.0.1</version>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>com.rcrc.wso2.mi.local-entry</groupId>
+      <artifactId>MongoDBSampleConnectionURI</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.rcrc.wso2.mi.local-entry</groupId>
+      <artifactId>MongoDBSampleLocalConfig</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+    <dependency>
+      <groupId>com.rcrc.wso2.mi.api</groupId>
+      <artifactId>MongoDBSample</artifactId>
+      <version>1.0.0</version>
+      <type>xml</type>
+    </dependency>
+  </dependencies>
   <repositories>
     <repository>
       <releases>

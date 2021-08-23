@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/mongodbsample" name="MongoDBSample" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="POST" uri-template="/insertmany">
+        <inSequence>
+            <propertyGroup>
+                <property expression="get-property('MongoDBSampleLocalConfig')" name="mongoconfig" scope="default" type="OM"/>
+                <property expression="$ctx:mongoconfig//user" name="user" scope="default" type="STRING"/>
+                <property expression="$ctx:mongoconfig//password" name="password" scope="default" type="STRING"/>
+                <property expression="$ctx:mongoconfig//profile" name="profile" scope="default" type="STRING"/>
+            </propertyGroup>
+            <log level="custom">
+                <property name="!!!! MongoDBSample !!!!!!!!" value="!!!! Inside MongoDBSample !!!!!!!!"/>
+                <property expression="$ctx:mongoconfig//user" name="user"/>
+                <property expression="$ctx:mongoconfig//password" name="password"/>
+                <property expression="$ctx:mongoconfig//profile" name="profile"/>
+            </log>
+            <mongodb.insertMany configKey="MongoDBSampleConnectionURI">
+                <collection>{json-eval($.collection)}</collection>
+                <documents>{json-eval($.documents)}</documents>
+                <ordered>True</ordered>
+            </mongodb.insertMany>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/find">
+        <inSequence>
+            <propertyGroup>
+                <property expression="get-property('MongoDBSampleLocalConfig')" name="mongoconfig" scope="default" type="OM"/>
+                <property expression="$ctx:mongoconfig/*[local-name()='user']/text()" name="user" scope="default" type="STRING"/>
+                <property expression="$ctx:mongoconfig/*[local-name()='password']/text()" name="password" scope="default" type="STRING"/>
+                <property expression="$ctx:mongoconfig/*[local-name()='profile']/text()" name="profile" scope="default" type="STRING"/>
+            </propertyGroup>
+            <log level="custom">
+                <property name="!!!! MongoDBSample !!!!!!!!" value="!!!!!!!!!!!!!!!! Inside MongoDBSample !!!!!!!!!!!!!!!!!!!"/>
+                <property expression="$ctx:user" name="user"/>
+                <property expression="$ctx:password" name="password"/>
+                <property expression="$ctx:profile" name="profile"/>
+            </log>
+            <mongodb.find configKey="MongoDBSampleConnectionURI">
+                <collection>{json-eval($.collection)}</collection>
+                <query>{json-eval($.query)}</query>
+                <limit>{json-eval($.limit)}</limit>
+                <sort>{json-eval($.sort)}</sort>
+            </mongodb.find>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

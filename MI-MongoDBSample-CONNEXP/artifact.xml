@@ -1,1 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><artifacts/>
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="mongodb-connector" groupId="com.rcrc.wso2.mi.lib" version="1.0.1" type="synapse/lib" serverRole="EnterpriseServiceBus">
+        <file>mongodb-connector-1.0.1.zip</file>
+    </artifact>
+</artifacts>

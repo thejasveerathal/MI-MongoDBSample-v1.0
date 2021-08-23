@@ -1,1 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><artifacts/>
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="MongoDBSample" groupId="com.rcrc.wso2.mi.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/MongoDBSample.xml</file>
+    </artifact>
+    <artifact name="MongoDBSample_Connection_URI" groupId="com.rcrc.wso2.mi.local-entry" version="1.0.0" type="synapse/local-entry" serverRole="EnterpriseServiceBus">
+        <file>\src\main\synapse-config\local-entries\MongoDBSample_Connection_URI.xml</file>
+    </artifact>
+    <artifact name="MongoDBSampleConnectionURI" groupId="com.rcrc.wso2.mi.local-entry" version="1.0.0" type="synapse/local-entry" serverRole="EnterpriseServiceBus">
+        <file>\src\main\synapse-config\local-entries\MongoDBSampleConnectionURI.xml</file>
+    </artifact>
+    <artifact name="MongoDBSampleConnectionURI" groupId="com.rcrc.wso2.mi.local-entry" version="1.0.0" type="synapse/local-entry" serverRole="EnterpriseServiceBus">
+        <file>\src\main\synapse-config\local-entries\MongoDBSampleConnectionURI.xml</file>
+    </artifact>
+    <artifact name="MongoDBSampleLocalConfig" groupId="com.rcrc.wso2.mi.local-entry" version="1.0.0" type="synapse/local-entry" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/local-entries/MongoDBSampleLocalConfig.xml</file>
+    </artifact>
+</artifacts>
