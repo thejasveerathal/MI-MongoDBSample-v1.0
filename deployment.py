@@ -5,14 +5,7 @@ nexusrepositoryurl = "http://localhost:8081/repository/micro-integrator/MI-Mongo
 nexusurlpath = Path(nexusrepositoryurl)
 artifactname = nexusurlpath.name
 
-
-deploymentlib.nexusdownload(nexusrepositoryurl)
-
-deploymentlib.unzipnexuspackage(artifactname)
-
-#deploymentlib.configupdate(artifactname,"dev")
-
-#deploymentlib.devdeployment(artifactname)
+deploymentlib.devdeployment(artifactname)
 
 
 
