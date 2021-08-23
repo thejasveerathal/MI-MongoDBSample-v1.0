@@ -5,6 +5,7 @@ nexusrepositoryurl = "http://172.18.0.2:8081/repository/micro-integrator/MI-Mong
 nexusurlpath = Path(nexusrepositoryurl)
 artifactname = nexusurlpath.name
 
+deploymentlib.nexusdownload(nexusrepositoryurl)
 deploymentlib.devdeployment(artifactname)
 
 
