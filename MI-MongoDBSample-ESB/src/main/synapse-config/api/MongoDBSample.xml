@@ -4,15 +4,15 @@
         <inSequence>
             <propertyGroup>
                 <property expression="get-property('MongoDBSampleLocalConfig')" name="mongoconfig" scope="default" type="OM"/>
-                <property expression="$ctx:mongoconfig//user" name="user" scope="default" type="STRING"/>
-                <property expression="$ctx:mongoconfig//password" name="password" scope="default" type="STRING"/>
-                <property expression="$ctx:mongoconfig//profile" name="profile" scope="default" type="STRING"/>
+                <property expression="$ctx:mongoconfig/*[local-name()='user']/text()" name="user" scope="default" type="STRING"/>
+                <property expression="$ctx:mongoconfig/*[local-name()='password']/text()" name="password" scope="default" type="STRING"/>
+                <property expression="$ctx:mongoconfig/*[local-name()='profile']/text()" name="profile" scope="default" type="STRING"/>
             </propertyGroup>
             <log level="custom">
-                <property name="!!!! MongoDBSample !!!!!!!!" value="!!!! Inside MongoDBSample !!!!!!!!"/>
-                <property expression="$ctx:mongoconfig//user" name="user"/>
-                <property expression="$ctx:mongoconfig//password" name="password"/>
-                <property expression="$ctx:mongoconfig//profile" name="profile"/>
+                <property name="!!!! MongoDBSample !!!!!!!!" value="!!!!!!!!!!!!!!!! Inside MongoDBSample Insertmany !!!!!!!!!!!!!!!!!!!"/>
+                <property expression="$ctx:user" name="user"/>
+                <property expression="$ctx:password" name="password"/>
+                <property expression="$ctx:profile" name="profile"/>
             </log>
             <mongodb.insertMany configKey="MongoDBSampleConnectionURI">
                 <collection>{json-eval($.collection)}</collection>
@@ -33,7 +33,7 @@
                 <property expression="$ctx:mongoconfig/*[local-name()='profile']/text()" name="profile" scope="default" type="STRING"/>
             </propertyGroup>
             <log level="custom">
-                <property name="!!!! MongoDBSample !!!!!!!!" value="!!!!!!!!!!!!!!!! Inside MongoDBSample !!!!!!!!!!!!!!!!!!!"/>
+                <property name="!!!! MongoDBSample !!!!!!!!" value="!!!!!!!!!!!!!!!! Inside MongoDBSample Find !!!!!!!!!!!!!!!!!!!"/>
                 <property expression="$ctx:user" name="user"/>
                 <property expression="$ctx:password" name="password"/>
                 <property expression="$ctx:profile" name="profile"/>
