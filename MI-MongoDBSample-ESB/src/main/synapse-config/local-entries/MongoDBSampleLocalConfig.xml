@@ -3,6 +3,6 @@
     <properties>
         <user>devuser</user>
         <password>devpassword</password>
-        <profile>devprofile</profile>
+        <profile>devprofiles</profile>
     </properties>
 </localEntry>
