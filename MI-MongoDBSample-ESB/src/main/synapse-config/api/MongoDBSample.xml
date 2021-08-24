@@ -7,14 +7,14 @@
                 <property expression="$ctx:mongoconfig/*[local-name()='user']/text()" name="user" scope="default" type="STRING"/>
                 <property expression="$ctx:mongoconfig/*[local-name()='password']/text()" name="password" scope="default" type="STRING"/>
                 <property expression="$ctx:mongoconfig/*[local-name()='profile']/text()" name="profile" scope="default" type="STRING"/>
-                <property expression="$ctx:mongoconfig/*[local-name()='message']/text()" name="message" scope="default" type="STRING"/>
+              
             </propertyGroup>
             <log level="custom">
                 <property name="!!!! MongoDBSample !!!!!!!!" value="!!!!!!!!!!!!!!!! Inside MongoDBSample Insertmany Testing!!!!!!!!!!!!!!!!!!!"/>
                 <property expression="$ctx:user" name="user"/>
                 <property expression="$ctx:password" name="password"/>
                 <property expression="$ctx:profile" name="profile"/>
-                <property expression="$ctx:message" name="message"/>
+                
             </log>
             <mongodb.insertMany configKey="MongoDBSampleConnectionURI">
                 <collection>{json-eval($.collection)}</collection>
