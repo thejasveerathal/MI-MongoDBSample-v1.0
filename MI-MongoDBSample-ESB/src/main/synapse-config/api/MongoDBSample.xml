@@ -10,7 +10,7 @@
                 <property expression="$ctx:mongoconfig/*[local-name()='message']/text()" name="message" scope="default" type="STRING"/>
             </propertyGroup>
             <log level="custom">
-                <property name="!!!! MongoDBSample !!!!!!!!" value="!!!!!!!!!!!!!!!! Inside MongoDBSample Insertmany !!!!!!!!!!!!!!!!!!!"/>
+                <property name="!!!! MongoDBSample !!!!!!!!" value="!!!!!!!!!!!!!!!! Inside MongoDBSample Insertmany Testing!!!!!!!!!!!!!!!!!!!"/>
                 <property expression="$ctx:user" name="user"/>
                 <property expression="$ctx:password" name="password"/>
                 <property expression="$ctx:profile" name="profile"/>
