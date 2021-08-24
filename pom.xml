@@ -4,7 +4,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.rcrc.wso2.mi</groupId>
   <artifactId>MI-MongoDBSample</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <packaging>pom</packaging>
   <name>MI-MongoDBSample</name>
   <description>MI-MongoDBSample</description>
