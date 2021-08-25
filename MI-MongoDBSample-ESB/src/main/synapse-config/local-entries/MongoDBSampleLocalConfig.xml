@@ -4,6 +4,5 @@
         <user>devuser</user>
         <password>devpassword</password>
         <profile>devprofiles</profile>
-        <message>Hello World!!</message>
     </properties>
 </localEntry>
